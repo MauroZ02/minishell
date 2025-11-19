@@ -6,7 +6,7 @@
 /*   By: mzangaro <mzangaro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 20:24:36 by mzangaro          #+#    #+#             */
-/*   Updated: 2025/11/18 19:46:36 by mzangaro         ###   ########.fr       */
+/*   Updated: 2025/11/19 19:23:34 by mzangaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <signal.h>
 # include "libft/libft.h"
 
-typedef enum	e_labels
+typedef enum e_labels
 {
 	TOKEN_WORD,
 	TOKEN_PIPE,
@@ -31,7 +31,7 @@ typedef enum	e_labels
 	TOKEN_EOF,
 }	t_labels;
 
-typedef struct	s_token
+typedef struct s_token
 {
 	char			*value;
 	t_labels		type;
