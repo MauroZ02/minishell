@@ -6,7 +6,7 @@
 /*   By: mzangaro <mzangaro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 20:24:36 by mzangaro          #+#    #+#             */
-/*   Updated: 2025/11/19 19:23:34 by mzangaro         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:43:21 by mzangaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,16 @@ typedef struct s_token
 	t_labels		type;
 	struct s_token	*next;
 }	t_token;
+
+/* parser.c */
+int		handle_quotes(char *line, int *i, t_token **head);
+int		handle_redirections(char *line, int *i, t_token **head);
+int		handle_word(char *line, int *i, t_token **head);
+int		token_handler(char *line, int *i, t_token **head);
+
+/* utils.c */
+t_token	*new_token(char *line, t_labels type);
+int		token_add_back(t_token **head, t_token *new_token);
+void	free_token_list(t_token *head);
 
 #endif
